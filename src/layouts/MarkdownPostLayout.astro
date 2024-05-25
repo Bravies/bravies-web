@@ -9,7 +9,6 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Blog. Bravies">
-	<Navigation />
     <Section>
         <a class="text-orange-600 font-bold" href={frontmatter.typeLink}>{frontmatter.typeDisplay}</a>
         <h1 class="mt-4 leading-8 text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl">{frontmatter.title}</h1>

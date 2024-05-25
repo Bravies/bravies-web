@@ -1,9 +1,14 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 interface Props {
 	title: string;
+	hideSignUp?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, hideSignUp } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,12 +17,18 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<ViewTransitions />
 	</head>
-	<body>
+	<body x-data="{ open: false }" x-init="$refs.waitlistModal.classList.remove('hidden')">
+		<Navigation hideSignUp={hideSignUp} />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>

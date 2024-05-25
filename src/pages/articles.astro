@@ -2,7 +2,6 @@
 import '../styles/index.css';
 
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
 
 import { getCollection } from 'astro:content';
 import BlogPost from '../components/BlogPost.astro';
@@ -11,11 +10,10 @@ const posts = await getCollection('posts');
 ---
 
 <Layout title="Welcome to Bravies.">
-	<Navigation />
-	<section>
+	<section class="p-8 mx-auto max-w-4xl gap-8">
         <ul>
             {posts.map((post) => (
-                <BlogPost url={post.url} title={post.title} description={post.description} />
+                <BlogPost url={post.slug} title={post.data.title} description={post.data.brief} />
             ))}
         </ul>
     </section>

@@ -16,11 +16,17 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
-        content: fields.document({
+        subtitle: fields.text({ label: 'Subtitle', description: 'Provide more context to the title' }),
+        brief: fields.text({ label: 'Brief', multiline: true, description: 'A short introduction to the content. One or two sentences at most' }),
+        tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags', itemLabel: props => props.value, description: 'Allows the user to filter articles by subject' }),
+        content: fields.markdoc({
           label: 'Content',
-          dividers: true,
-          links: true,
-          images: true,
+        }),
+        author: fields.text({ label: 'Author', defaultValue: 'Dr. Andrea Bliss' }),
+        publishedOn: fields.date({
+          label: 'Published On',
+          description: 'The date the article was published',
+          defaultValue: 'today',
         }),
       },
     }),
