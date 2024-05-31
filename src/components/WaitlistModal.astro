@@ -1,9 +1,9 @@
-<div 
+<div
     id="waitlist-modal"
     @keydown.window.escape="open = false"
     x-ref="waitlistModal"
     x-show="open"
-    class="relative z-10 hidden" 
+    class="relative z-10 hidden"
     aria-labelledby="modal-title"
     role="dialog"
     aria-modal="true"
@@ -19,7 +19,7 @@
         x-on:click="open = false"
         class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-1000 ease-in">
     </div>
-  
+
     <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
       <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
         <div
@@ -41,13 +41,17 @@
             <div class="mt-3 text-center sm:mt-5">
                 <h3 class="text-base font-semibold leading-6 text-gray-900 mb-2" id="modal-title">Thank you for your interest in Bravies!</h3>
                 <p class="text-sm text-gray-500 mb-4">We are currently at full capacity. Sign up to be notified as soon as space becomes available.</p>
-                <form class="w-full">
+                <form
+                  action="https://formspree.io/f/xvoejpqv"
+                  method="POST"
+                  class="w-full"
+                >
                     <div class="flex gap-x-4">
                     <label for="email-address" class="sr-only">Email address</label>
                     <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6" placeholder="Enter your email">
                     <button type="submit" class="flex-none rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Join Waitlist</button>
                     </div>
-                    <p class="mt-4 text-sm leading-6 text-gray-900">We care about your data. Read our <a href="#" class="font-semibold text-orange-600 hover:text-orange-500">privacy&nbsp;policy</a>.</p>
+                    <p class="mt-4 text-sm leading-6 text-gray-900">We care about your data. Read our <a href="/privacy" class="font-semibold text-orange-600 hover:text-orange-500">privacy&nbsp;policy</a>.</p>
                 </form>
             </div>
           </div>
@@ -55,4 +59,3 @@
       </div>
     </div>
 </div>
-  

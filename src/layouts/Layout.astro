@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
 
 interface Props {
 	title: string;
@@ -14,6 +15,7 @@ const { title, hideSignUp } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -23,19 +25,24 @@ const { title, hideSignUp } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
+    <!-- Must be first to prevent third-party scripts from creating cookies -->
+    <script type="text/javascript" src="https://app.getterms.io/cookie-consent/embed/6e5aa8a1-6c09-4b3b-b888-c20a3e40ce68"></script>
+
 		<ViewTransitions />
 	</head>
 	<body x-data="{ open: false }" x-init="$refs.waitlistModal.classList.remove('hidden')">
 		<Navigation hideSignUp={hideSignUp} />
 		<slot />
 		<Footer />
+    <WaitlistModal />
 	</body>
 </html>
+
 <style is:global>
 	html {
 		font-family: system-ui, sans-serif;
 	}
-	
+
 	code {
 		font-family:
 			Menlo,

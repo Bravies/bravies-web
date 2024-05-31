@@ -5,6 +5,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .fade-out {
+    @apply animate-fadeOut;
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .animate-fadeOut {
+    animation: fadeOut 200ms forwards;
+  }
+}
+
 :root {
   /* palette */
   --palette-green: #cee5d8;

@@ -1,0 +1,50 @@
+---
+import '../styles/index.css';
+
+import Layout from '../layouts/Layout.astro';
+
+import { getCollection } from 'astro:content';
+import BlogPost from '../components/BlogPost.astro';
+
+const posts = await getCollection('posts');
+---
+<script>
+const urlSearchParams = new URLSearchParams(window.location.search);
+const type = urlSearchParams.get('type');
+
+if (type) {
+  const items = document.querySelectorAll('#resources li');
+
+  console.log(items);
+  items.forEach(item => {
+    if (!item) return;
+
+    if (!item.getAttribute('data-tags').includes(type)) {
+      item.classList.add('fade-out');
+      item.addEventListener('animationend', () => {
+        item.style.display = 'none';
+      }, { once: true });
+    } else {
+      item.style.display = '';
+      item.classList.remove('fade-out');
+    }
+  });
+}
+</script>
+
+<Layout title="Welcome to Bravies.">
+	<section class="p-8 mx-auto max-w-4xl gap-8">
+    <h1 class="text-4xl font-bold mb-8 lg:mt-16 text-gray-700">Anxiety Resources</h1>
+    <ul id="resources">
+        {posts.map((post) => (
+            <BlogPost
+              brief={post.data.brief}
+              tags={post.data.tags}
+              url={post.slug}
+              title={post.data.title}
+              description={post.data.brief}
+            />
+        ))}
+    </ul>
+  </section>
+</Layout>
