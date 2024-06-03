@@ -12,7 +12,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: 'https://bravies.ca',
   integrations: [tailwind({
-    applyBaseStyles: false
+    applyBaseStyles: false,
   }), react(), markdoc(), keystatic(), alpinejs(), sitemap()],
   output: 'hybrid',
   adapter: vercel()

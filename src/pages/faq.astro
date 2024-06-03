@@ -2,10 +2,7 @@
 import '../styles/index.css';
 
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
 import Section from '../components/Section.astro';
-
-const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Contact. Bravies">
@@ -15,16 +12,41 @@ const { frontmatter } = Astro.props;
         <div class="lg:grid lg:grid-cols-12 lg:gap-8">
           <div class="lg:col-span-5">
             <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
-            <p class="mt-4 text-base leading-7 text-gray-600">Can’t find the answer you’re looking for? Reach out to our <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">customer support</a> team.</p>
+            <p class="mt-4 text-base leading-7 text-gray-600">Can’t find the answer you’re looking for?<br /><a href="/contact" class="font-semibold text-bve_red hover:text-bve_red-light">Reach out to our support team.</a></p>
           </div>
           <div class="mt-10 lg:col-span-7 lg:mt-0">
             <dl class="space-y-10">
               <div>
-                <dt class="text-base font-semibold leading-7 text-gray-900">How do you make holy water?</dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600">You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</dd>
+                <dt class="text-base font-semibold leading-7 text-gray-900">What is anxiety?</dt>
               </div>
 
-              <!-- More questions... -->
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">Does my child have anxiety?</dt>
+              </div>
+
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">How will this program help my child?</dt>
+              </div>
+
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">What can I expect in the lessons?</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">If you feel like we haven't been able to help, <a class="text-bve_red hover:text-bve_red-light" href="/contact">please reach out</a> and we'll do our best to amend the situation. If you're still unsatisfied, in most cases we'll happily provide a refund.</dd>
+              </div>
+
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">How do you support me throughout the program?</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">We're available through in-app messaging for anything your need. If we feel as though any questions may require a licensed professional, we'll suggest setting up a scheduled appointment.</dd>
+              </div>
+
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">Do I get access to a clinical psychologist?</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">Only our <a class="text-bve_red hover:text-bve_red-light" href="/pricing#tier-guided">Guided plan</a> has access to a clinical psychologist. With this plan, you will have a monthly, hour-long one-on-one with a registered clinical psychologist.</dd>
+              </div>
+
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">Can I get a refund?</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">If you feel like we haven't been able to help, <a class="text-bve_red hover:text-bve_red-light" href="/contact">please reach out</a> and we'll do our best to amend the situation. If you're still unsatisfied, in most cases we'll happily provide a refund.</dd>
+              </div>
             </dl>
           </div>
         </div>

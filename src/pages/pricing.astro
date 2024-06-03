@@ -8,64 +8,67 @@ import Hero from '../components/Hero.astro';
 <Layout title="Pricing. Bravies">
 	<div class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
-      <h2 class="text-base font-semibold leading-7 text-orange-600">Pricing</h2>
-      <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">The right price for you, whoever you are</p>
+      <h2 class="text-base font-semibold leading-7 text-bve_red">Pricing</h2>
+      <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Straight-forward pricing</p>
     </div>
-    <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">Qui iusto aut est earum eos quae. Eligendi est at nam aliquid ad quo reprehenderit in aliquid fugiat dolorum voluptatibus.</p>
+    <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">You'll have great success with our self-serve program. If you feel in need of a little extra support, a licensed clinical psychologist is here to help.</p>
     <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
       <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 relative bg-white shadow-2xl">
-        <h3 id="tier-personal" class="text-base font-semibold leading-7 text-orange-600">Self-Serve</h3>
+        <h3 id="tier-personal" class="text-base font-semibold leading-7 text-bve_red">Self-Serve</h3>
         <p class="mt-4 flex items-baseline gap-x-2">
           <span class="text-5xl font-bold tracking-tight text-gray-900">$50</span>
           <span class="text-base text-gray-500">/month</span>
         </p>
-        <p class="mt-6 text-base leading-7 text-gray-600">The perfect plan if you&#039;re just getting started with our product.</p>
+        <p class="font-semibold mt-2">First month free</p>
+        <p class="mt-6 text-base leading-7 text-gray-600">Jump into the Bravies program with active support from our team.</p>
         <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10">
           <li class="flex gap-x-3">
-            <svg class="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-6 w-5 flex-none text-bve_red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
             </svg>
             Access to weekly lessons
           </li>
           <li class="flex gap-x-3">
-            <svg class="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-6 w-5 flex-none text-bve_red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
             </svg>
             Exercises and practice plans
           </li>
           <li class="flex gap-x-3">
-            <svg class="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-6 w-5 flex-none text-bve_red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
             </svg>
             Direct text chat with a Bravies specialist
           </li>
         </ul>
-        <button x-on:click="open = true" aria-describedby="tier-personal" class="w-full mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 sm:mt-10 bg-orange-600 text-white shadow hover:bg-orange-500">Get started today</button>
+        <button x-on:click="open = true" aria-describedby="tier-personal" class="w-full mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red sm:mt-10 bg-bve_red text-white shadow hover:bg-bve_red-light">Start free trial</button>
       </div>
       <div class="rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 bg-white/60 sm:mx-8 lg:mx-0 sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none">
-        <h3 id="tier-guided" class="text-base font-semibold leading-7 text-orange-600">Guided</h3>
+        <h3 id="tier-guided" class="text-base font-semibold leading-7 text-bve_red">Guided</h3>
         <p class="mt-4 flex items-baseline gap-x-2">
           <span class="text-5xl font-bold tracking-tight text-gray-900">$250</span>
           <span class="text-base text-gray-500">/month</span>
         </p>
-        <p class="mt-6 text-base leading-7 text-gray-600">A plan that scales with your rapidly growing business.</p>
+        <p class="mt-6 text-base leading-7 text-gray-600">Have a licensed clinical psychologist to assist in your jounrey.</p>
         <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10">
           <li class="flex gap-x-3">
-            <svg class="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-6 w-5 flex-none text-bve_red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
             </svg>
             Everything in the self-serve plan
           </li>
           <li class="flex gap-x-3">
-            <svg class="h-6 w-5 flex-none text-orange-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-6 w-5 flex-none text-bve_red" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
             </svg>
             1 hour with a trained child psychologist
           </li>
         </ul>
-        <button x-on:click="open = true" aria-describedby="tier-guided" class="w-full mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 sm:mt-10 text-orange-600 ring-2 ring-inset ring-orange-200 hover:ring-orange-300">Get started today</button>
+        <button x-on:click="open = true" aria-describedby="tier-guided" class="w-full mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red sm:mt-10 text-bve_red ring-2 ring-inset ring-bve_red-light hover:ring-bve_red-light">Get started today</button>
       </div>
     </div>
+    <div class="mt-10 flex justify-center">
+      <span class="italic text-gray-500">Can't afford our prices? <a href="/contact" class="leading-6 text-bve_red">Reach out to us</a> and we'll see what we can do.</span>
+    </div>
   </div>
-
 </Layout>
