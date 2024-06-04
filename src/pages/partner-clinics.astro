@@ -1,0 +1,32 @@
+---
+import '../styles/index.css';
+
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Partner clinics. Bravies">
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="mx-auto max-w-2xl py-24 lg:py-32">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Bravies as a Tool For Your Patients</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Extend your services with little effort. Clinics earn 50% of the subscription fees. Patients stay tied to your clinic through our services</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6 max-w-md mx-auto">
+          <form
+            action="https://formspree.io/f/mleqywyb"
+            method="POST"
+            class="w-full"
+          >
+              <div class="flex gap-x-4">
+              <label for="email-address" class="sr-only">Email address</label>
+              <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-bve_red sm:text-sm sm:leading-6" placeholder="Enter your email">
+              <button type="submit" class="flex-none rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Request Information</button>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-gray-600">We care about your data. Read our <a href="/privacy" class="font-semibold text-bve_red hover:text-bve_red-light">privacy&nbsp;policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</Layout>
