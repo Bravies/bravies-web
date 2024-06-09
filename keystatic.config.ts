@@ -26,7 +26,7 @@ export default config({
         publishedOn: fields.date({
           label: 'Published On',
           description: 'The date the article was published',
-          defaultValue: 'today',
+          defaultValue: { kind: 'today' }
         }),
       },
     }),
