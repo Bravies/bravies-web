@@ -20,7 +20,7 @@ export default defineConfig({
     },
   }),tailwind({
     applyBaseStyles: false
-  }), react(), markdoc(), keystatic(), alpinejs(), sitemap(), sentry()],
+  }), react(), markdoc(), keystatic(), alpinejs(), sitemap()],
   output: 'hybrid',
   adapter: vercel()
 });
