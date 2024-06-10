@@ -7,7 +7,7 @@
               <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl sm:leading-tight">We Help Conquer Your Child's Anxiety</h1>
               <p class="mt-6 text-lg leading-8 text-gray-600">Learn what works. Put it into practice. Watch your child gain confidence. </p>
               <div class="mt-10 flex items-center gap-x-6">
-                <button onclick="throw new Error('this is a test error')" class="rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red w-40">Get Started</button>
+                <button x-on:click="open = true; posthog.capture('get_started', { location: 'HERO' })" class="rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red w-40">Get Started</button>
                 <a href="#" class="text-sm font-semibold leading-6 text-gray-900">How does it work <span aria-hidden="true">→</span></a>
               </div>
             </div>
