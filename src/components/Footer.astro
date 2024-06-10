@@ -65,18 +65,19 @@ const year = new Date().getFullYear();
         action="https://formspree.io/f/xkndlwzq"
         method="POST"
         class="mt-6 sm:flex sm:max-w-md lg:mt-0"
+        data-event="newsletter_submitted"
       >
         <label for="email-address" class="sr-only">Email address</label>
         <input type="email" name="email-address" id="email-address" autocomplete="email" required class="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-bve_red-light sm:w-56 sm:text-sm sm:leading-6" placeholder="Enter your email">
         <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-          <button type="submit" class="flex w-full items-center justify-center rounded-md bg-bve_red-light px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red-light">Subscribe</button>
+          <button id="newsletter-submit" type="submit" class="flex w-full items-center justify-center rounded-md bg-bve_red-light px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red-light">Subscribe</button>
         </div>
       </form>
     </div>
     <div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
       <div class="flex space-x-6 md:order-2 text-gray-400">
         <a href="https://app.bravies.ca/sign-in">Sign In</a>
-        <button x-on:click="open = true">Get Started</a>
+        <button x-on:click="open = true; posthog.capture('get_started', { location: 'FOOTER' })">Get Started</a>
       </div>
       <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; {year} Bravies, Inc. All rights reserved. <a data-gt-cookie-widget-show class="cursor-pointer">Manage Cookie Preferences</a></p>
     </div>

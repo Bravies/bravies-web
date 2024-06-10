@@ -25,7 +25,7 @@ const { hideSignUp } = Astro.props;
           <a href="/who-we-are" class="text-sm font-semibold leading-6 text-gray-900">Who We Are</a>
           <a href="/pricing" class="text-sm font-semibold leading-6 text-gray-900">Pricing</a>
           <a href="https://app.bravies.ca/sign-in" class="text-sm font-semibold leading-6 text-gray-900">Log in {hideSignUp && <>&nbsp;<span aria-hidden="true">&rarr;</span></>}</a>
-          {!hideSignUp && <div class="relative w-32"><button x-on:click="open = true" class="w-32 -mt-2 absolute rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</button></div>}
+          {!hideSignUp && <div class="relative w-32"><button x-on:click="open = true; posthog.capture('get_started', { location: 'NAV' })" class="w-32 -mt-2 absolute rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</button></div>}
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -55,7 +55,7 @@ const { hideSignUp } = Astro.props;
             </div>
             <div class="py-6 flex justify-between">
               <a href="https://app.bravies.ca/sign-in" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-              <button x-on:click="open = true" class="rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</button>
+              <button x-on:click="open = true; posthog.capture('get_started', { location: 'NAV' })" class="rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</button>
             </div>
           </div>
         </div>

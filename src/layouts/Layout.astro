@@ -1,5 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+
+import PostHog from '../components/posthog.astro';
+
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import WaitlistModal from '../components/WaitlistModal.astro';
@@ -28,6 +31,7 @@ const { title, hideSignUp } = Astro.props;
     <!-- Must be first to prevent third-party scripts from creating cookies -->
     <script type="text/javascript" src="https://app.getterms.io/cookie-consent/embed/6e5aa8a1-6c09-4b3b-b888-c20a3e40ce68"></script>
 
+    <PostHog />
 		<ViewTransitions />
 	</head>
 	<body x-data="{ open: false }" x-init="$refs.waitlistModal.classList.remove('hidden')">
@@ -35,6 +39,23 @@ const { title, hideSignUp } = Astro.props;
 		<slot />
 		<Footer />
     <WaitlistModal />
+
+    <script>
+      const forms = document.getElementsByTagName('form');
+
+      for (let form of forms) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const eventName = form.getAttribute('data-event');
+          if (eventName) {
+            window?.posthog.capture(eventName);
+          }
+
+          form.submit();
+        });
+      }
+    </script>
 	</body>
 </html>
 
