@@ -14,6 +14,7 @@ export default defineConfig({
   site: 'https://bravies.ca',
   integrations: [sentry({
     dsn: "https://835eeb41edf622fbc720d48da63cdcff@o4507405439401984.ingest.us.sentry.io/4507405442547712",
+    org: "bravies-c0",
     sourceMapsUploadOptions: {
       project: "web",
       authToken: process.env.SENTRY_AUTH_TOKEN,
