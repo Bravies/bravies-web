@@ -3,11 +3,24 @@ import '../styles/index.css';
 
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import AssociatedCompanies from '../components/home/AssociatedCompanies.astro';
+import Testimonials from '../components/home/Testimonials.astro';
 ---
 
 <Layout title="Welcome to Bravies!" hideSignUp>
 	<Hero />
-  <main class="max-w-7xl mx-auto lg:px-8">
+  <div class="bg-gray-900">
+  <main class=" max-w-7xl mx-auto lg:px-8">
+    <div class=" py-12 sm:py-18 text-white text-center">
     Bravies was created to bring a psychologist to you – to be accessible when you have a few minutes between all the other moving parts in your day. Everyone deserves access to effective mental healthcare. Every child deserves to learn these simple strategies to get back to being a kid.
+    </div>
   </main>
+</div>
+  <AssociatedCompanies />
+  <main class=" max-w-7xl mx-auto lg:px-8">
+    <div class=" py-12 sm:py-18 text-center">
+      <h1 class="text-2xl">How it works</h1>
+    </div>
+  </main>
+  <Testimonials />
 </Layout>
