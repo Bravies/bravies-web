@@ -60,13 +60,14 @@ const { title, hideSignUp } = Astro.props;
 	<script>
 		(function(d,t) {
 		var BASE_URL="https://app.chatwoot.com";
-		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		var g=d.createElement(t) as HTMLScriptElement;
+		var s=d.getElementsByTagName(t)[0];
 		g.src=BASE_URL+"/packs/js/sdk.js";
 		g.defer = true;
 		g.async = true;
-		s.parentNode.insertBefore(g,s);
+		s.parentNode?.insertBefore(g,s);
 		g.onload=function(){
-			window.chatwootSDK?.run({
+			(window as any).chatwootSDK?.run({
 			websiteToken: 'Czcr6djLKznY7CWYb4qtkhMy',
 			baseUrl: BASE_URL
 			})
