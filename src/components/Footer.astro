@@ -5,8 +5,11 @@ const year = new Date().getFullYear();
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
     <div class="xl:grid xl:grid-cols-5 xl:gap-8">
-      <div class="xl:col-span-2">
-        <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=500" alt="Company name">
+      <div class="xl:col-span-2 flex">
+        <svg class="h-8 w-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 2Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="ml-3 text-2xl font-semibold text-white">Bravies</div>
       </div>
       <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-3 xl:mt-0">
         <div class="mt-10 md:mt-0">
@@ -76,8 +79,8 @@ const year = new Date().getFullYear();
     </div>
     <div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
       <div class="flex space-x-6 md:order-2 text-gray-400">
-        <a href="https://app.bravies.ca/sign-in">Sign In</a>
-        <button x-on:click="open = true; posthog.capture('get_started', { location: 'FOOTER' })">Get Started</a>
+        <a href="https://app.bravies.ca">Sign In</a>
+        <a href="https://app.bravies.ca/welcome">Get Started</a>
       </div>
       <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; {year} Bravies, Inc. All rights reserved. <a data-gt-cookie-widget-show class="cursor-pointer">Manage Cookie Preferences</a></p>
     </div>

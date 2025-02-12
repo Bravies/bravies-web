@@ -8,9 +8,11 @@ const { hideSignUp } = Astro.props;
 
 <header x-data="{ isNavOpen: false }" @keydown.window.escape="isNavOpen = false" class="bg-white">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <a href="/" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
-        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600" alt="">
+      <a href="/" class="-m-1.5 p-1.5 flex items-center">
+        <svg class="h-8 w-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 2Z" fill="#EA580C" stroke="#EA580C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="ml-3 text-xl font-semibold">Bravies</div>
       </a>
       <div class="flex lg:hidden">
         <button @click="isNavOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -21,11 +23,9 @@ const { hideSignUp } = Astro.props;
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-          <a href="/how-it-works" class="text-sm font-semibold leading-6 text-gray-900">How It Works</a>
-          <a href="/who-we-are" class="text-sm font-semibold leading-6 text-gray-900">Who We Are</a>
           <a href="/pricing" class="text-sm font-semibold leading-6 text-gray-900">Pricing</a>
           <a href="https://app.bravies.ca/sign-in" class="text-sm font-semibold leading-6 text-gray-900">Log in {hideSignUp && <>&nbsp;<span aria-hidden="true">&rarr;</span></>}</a>
-          {!hideSignUp && <div class="relative w-32"><button x-on:click="open = true; posthog.capture('get_started', { location: 'NAV' })" class="w-32 -mt-2 absolute rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</button></div>}
+          {!hideSignUp && <div class="relative w-32"><a href="https://app.bravies.ca/welcome" class="w-32 -mt-2 absolute rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</a></div>}
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -35,7 +35,7 @@ const { hideSignUp } = Astro.props;
       <div @click.away="isNavOpen = false" class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+            <span class="sr-only">Bravies</span>
             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600" alt="">
           </a>
           <button @click="isNavOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -54,8 +54,8 @@ const { hideSignUp } = Astro.props;
               <a href="/anxiety-resources" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Resources</a>
             </div>
             <div class="py-6 flex justify-between">
-              <a href="https://app.bravies.ca/sign-in" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-              <button x-on:click="open = true; posthog.capture('get_started', { location: 'NAV' })" class="rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</button>
+              <a href="https://app.bravies.ca" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+              <a href="https://app.bravies.ca/welcome" class="rounded-md bg-bve_red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Get Started</a>
             </div>
           </div>
         </div>

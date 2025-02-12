@@ -1,0 +1,9 @@
+<div class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 my-24 sm:my-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unsure if Bravies is a fit for your family?<br>Chat with us now.</h2>
+    <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+      <button x-on:click="window.$chatwoot.toggle(); posthog.capture('chat_now', { location: 'DOUBTS' })" class="rounded-md bg-bve_red w-40 text-center px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bve_red-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bve_red">Chat Now</button>
+      <a href="https://app.bravies.ca/welcome" class="text-sm w-32 font-semibold leading-6 text-gray-900">Get started <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
