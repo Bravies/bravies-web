@@ -21,7 +21,7 @@ export default {
         dark: '#c03824',
         faint: '#f7e2cc',
       },
-      bve_red__light: '#e06854',
+      bve_red__light: '#e07864',
       bve_red__dark: '#c03824',
       bve_blue: '#427f94',
       ...colors
